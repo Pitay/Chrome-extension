@@ -1,0 +1,51 @@
+{
+    "name": "Panaya_RCA",
+    "version": "3.8.6",
+    "manifest_version": 2,
+    "description": "Panaya_RCA",
+    "homepage_url": "https://github.com/octo-linker/chrome-extension",
+    "icons": {
+        "128": "images/panaya.png"
+    },
+    "browser_action": {
+        "default_icon": "images/panaya.png"
+    },
+    "default_locale": "en",
+    "options_page": "configuration.html",
+    "background": {
+        "scripts": [
+            "scripts/startListener.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://jira.panaya.com/*",
+                "http://jira.panaya.com/*",
+                "https://scn.sap.com/*",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/main.css"
+            ],
+            "js": [
+                "jquery.js",
+                "scripts/callContent.js"
+            ],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://jira.panaya.com/",
+        "http://jira.panaya.com/",
+        "activeTab",
+        "background",
+        "cookies",
+        "alarms",
+        "https://ajax.googleapis.com/"
+    ]
+}

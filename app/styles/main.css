@@ -1,0 +1,17 @@
+.octo-linker {
+    cursor: pointer;
+}
+
+.octo-linker:hover {
+    text-decoration: underline;
+}
+
+a:hover {background:inherit; text-decoration:none; } /*BG color is a must for IE6*/
+a.tooltip1{ border: dashed;border-color: #0ca3d2;border-width: thin }
+a.tooltip1 span {display: none}
+a.tooltip1:hover span{display:inline; position:absolute; background:white; padding-left: 3px; border:1px solid #cccccc; color:#6c6c6c;}
+
+.tooltip-icon{
+    background-image:"../images/panaya-click.png" ;
+    width:250px;
+}
